@@ -1,0 +1,23 @@
+package com.ohgiraffers.gson;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.sql.Date;
+
+@WebServlet("/gson/test2")
+public class GsonTestServlet02 extends HttpServlet {
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	
+		String memberCode = request.getParameter("memberCode");
+		String name = request.getParameter("name");
+		char gender = request.getParameter("gender").charAt(0);
+		int age = Integer.parseInt(request.getParameter("age"));
+		Date enrollDate = Date.valueOf(request.getParameter("enrollDate"));
+	
+	}
+}
